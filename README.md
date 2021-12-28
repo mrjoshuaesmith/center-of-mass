@@ -5,7 +5,9 @@ Finding the Center of the State of Massachusetts
 
 The Town of Rutland, MA prides itself on being the "center" of Massachusetts. They've even identified a particular tree as being the [Central Tree](https://www.google.com/maps/place/Central+Tree,+Geographical+Center+of+Massachusetts/@42.3773906,-71.9280109,17z/data=!4m13!1m7!3m6!1s0x89e3ffb63a179009:0xd3499f926e9ce6d6!2sCentral+Tree+Rd,+Rutland,+MA!3b1!8m2!3d42.3773906!4d-71.9258222!3m4!1s0x89e3ff4c6945dae3:0xc8d8503a3a6d63c5!8m2!3d42.3780333!4d-71.9265767). There is a road called "Central Tree Road" and there are events like the "Central Tree Chowder Challenge" and the "Central Tree Music Festival." This all begs the question: how did they figure that out?
 
-It appears this started with the USGS. Once upon a time, someone there published a list with the "geographic center" of each state. And some other sites picked up this data and ran with it (for example, [this one](https://www.netstate.com/states/geography/ma_geography.htm)). However, if you dig into that site a little, they reveal that the USGS [changed its mind](https://www.netstate.com/subdocuments/geographic_center.htm). The USGS apparently has no idea how this location was selected and has renounced it.
+<a title="Daderot, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Central_Tree_-_Rutland,_Massachusetts_-_DSC07240.JPG"><img width="160" alt="Central Tree - Rutland, Massachusetts - DSC07240" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Central_Tree_-_Rutland%2C_Massachusetts_-_DSC07240.JPG/160px-Central_Tree_-_Rutland%2C_Massachusetts_-_DSC07240.JPG"></a>
+
+It appears this started with the USGS. Once upon a time, someone there published a list with the "geographic center" of each state. And some other sites picked up this data and ran with it (for example, [this one](https://www.netstate.com/states/geography/ma_geography.htm)). However, if you dig into that latter site a little, they reveal that the USGS [changed its mind](https://www.netstate.com/subdocuments/geographic_center.htm). The USGS apparently has no idea how this location was selected and has renounced it.
 
 This raises the obvious question: Where is the Center of Massachusetts? Is it *actually* in Rutland, MA? If not, where is it?
 
@@ -52,5 +54,7 @@ I tested the sampling code using Excel as mentioned above, and the resulting fil
 
 You'll notice a little hole at Lake Massapoag, and at a tigher sampling interval, there are probably a couple other lakes that get skipped east of -71.5º, but all in all, it seems unlikely those would impact our results much.
 
-Using a 100 meter sampling interval, the program eventually yielded these results:
+Using a 100 meter sampling interval and a few hours of CPU time, the program eventually yielded these results:
 
+```
+```
