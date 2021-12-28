@@ -44,13 +44,34 @@ The other advantage of using sampling, is that we can print all the pin location
 
 ## Coordinate system complications
 
-All our data is in degrees of latitude and longitude. However, the size of a degree of longitude is not a constant. It gets shorter and shorter the closer you get to the poles. Usually, some sort of projection (such as UTM) would be applied to stretch things out so the coordinates are consistent. However, given that we are sampling, this is pretty simple. You just slightly change the longitudinal sampling interval, based on how many degrees a meter covers at that point.
+All our data is in degrees of latitude and longitude. However, the size of a degree of longitude is not a constant. It gets shorter and shorter the closer you get to the poles. Usually, some sort of projection (such as UTM) would be applied to stretch things out so the coordinates are consistent. However, given that we are sampling, this is not necessary. Instead, we just slightly change the longitudinal sampling interval, based on how many degrees a meter covers at that point:
+
+```
+def meterToLat():
+    return 1/111139.0
+
+def meterToLon(lat):
+    return 1/ (40075000.0 * abs(math.cos(lat*math.pi/180)) / 360.0)
+
+meters = 100
+lat = minLat
+while lat <= maxLat:
+    lon = minLon
+    lonStep = meters*meterToLon(lat)
+    while lon <= maxLon:
+        #
+        # do things with lon, lat
+        #
+        lon += lonStep
+    lat += meters*meterToLat()
+
+```
 
 ## Results
 
-I tested the sampling code using Excel as mentioned above, and the resulting file is included with the sources. The orange dots are my samples that pass all the tests, and the gray dots are the boundaries of the state.
+I tested the sampling code using Excel as mentioned above, and the resulting file is included with the sources. The orange dots are samples at a 2km interval that pass all the tests, and the gray dots are the boundaries of the state.
 
-<img width="1061" alt="excel plot of 2KM sample interval" src="https://user-images.githubusercontent.com/42067635/147588456-850e08a8-7452-4339-a969-70872710a267.png">
+<img width="1061" alt="excel plot of 2km sample interval" src="https://user-images.githubusercontent.com/42067635/147588456-850e08a8-7452-4339-a969-70872710a267.png">
 
 You'll notice a little hole at Lake Massapoag, and at a tigher sampling interval, there are probably a couple other lakes that get skipped east of -71.5º, but all in all, it seems unlikely those would impact our results much.
 
