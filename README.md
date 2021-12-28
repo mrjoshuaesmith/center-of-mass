@@ -7,7 +7,7 @@ The Town of Rutland, MA prides itself on being the "center" of Massachusetts. Th
 
 <a title="Daderot, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Central_Tree_-_Rutland,_Massachusetts_-_DSC07240.JPG"><img width="160" alt="Central Tree - Rutland, Massachusetts - DSC07240" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Central_Tree_-_Rutland%2C_Massachusetts_-_DSC07240.JPG/160px-Central_Tree_-_Rutland%2C_Massachusetts_-_DSC07240.JPG"></a>
 
-It appears this started with the USGS. Once upon a time, someone there published a list with the "geographic center" of each state. And some other sites picked up this data and ran with it (for example, [this one](https://www.netstate.com/states/geography/ma_geography.htm)). However, if you dig into that latter site a little, they reveal that the USGS [changed its mind](https://www.netstate.com/subdocuments/geographic_center.htm). The USGS apparently has no idea how this location was selected and has renounced it.
+[Nobody knows](https://archive.boston.com/news/globe/living/articles/2004/03/15/town_is_rooted_in_trees_history/). There is zero evidence of anyone ever describing this center in an actual survey. Somewhere along the way, the USGS started to repeat the claim. It seems that once upon a time, someone there published a list with the "geographic center" of each state. And various sites picked up this data and ran with it (for example, [this one](https://www.netstate.com/states/geography/ma_geography.htm)). However, if you dig into that latter site a little, they reveal that the USGS [changed its mind](https://www.netstate.com/states/geography/subdocuments/geographic_center.htm). The USGS apparently has no idea how this location was selected and has renounced it.
 
 This raises the obvious question: Where is the Center of Massachusetts? Is it *actually* in Rutland, MA? If not, where is it?
 
@@ -20,9 +20,9 @@ Although it's not particularly clear in that sentence, that "or" doesn't meant t
 
 That USGS pub says there are as many centers as there are definitions, which means they acknowledge the balace point isn't the only one. Another obvious one would be the center of a bounding rectangle.
 
-Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is the centroid of the shape, since we assume constant elevation), it is an average. When we look at data using an average, outliers (looking at you Provicetown, MA) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
+Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is also the centroid of the shape, since we assume constant elevation), it is at it's heart an *average*. When we look at data using an average, outliers (looking at you Provicetown, MA) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
 
-So that's what this project does. It finds the geographic center of Massachusetts using three definitions: center of bounding rectangle, balance point, and median.
+In this project, I decided to go ahead and find all three: center of bounding rectangle, balance point (aka, center of mass/gravity), and median.
 
 ## Data sources
 
