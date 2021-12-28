@@ -20,7 +20,7 @@ Although it's not particularly clear in that sentence, that "or" doesn't meant t
 
 That USGS pub says there are as many centers as there are definitions, which means they acknowledge the balace point isn't the only one. Another obvious one would be the center of a bounding rectangle.
 
-Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity, and the centroid of the shape, since we assume constant elevation), that's basically an average. When we look at data using an average, outliers (looking at you Provicetown, MA) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
+Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is the centroid of the shape, since we assume constant elevation), it is an average. When we look at data using an average, outliers (looking at you Provicetown, MA) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
 
 So that's what this project does. It finds the geographic center of Massachusetts using three definitions: center of bounding rectangle, balance point, and median.
 
