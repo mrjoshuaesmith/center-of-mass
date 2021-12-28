@@ -20,7 +20,7 @@ Although it's not particularly clear in that sentence, that "or" doesn't meant t
 
 That USGS pub says there are as many centers as there are definitions, which means they acknowledge the balace point isn't the only one. Another obvious one would be the center of a bounding rectangle.
 
-Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is also the centroid of the shape, since we assume constant elevation), it is at it's heart an *average*. When we look at data using an average, outliers (looking at you Provicetown, MA) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
+Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is also the centroid of the shape, since we assume constant elevation), it is simply an *average*. When we look at data using an average, outliers (looking at you Provicetown) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
 
 In this project, I decided to go ahead and find all three: center of bounding rectangle, balance point (aka, center of mass/gravity), and median.
 
@@ -34,7 +34,7 @@ Looking at other data on that same site, I found [maps of all the zip codes in M
 
 The next thing I learned, though, is that there are a handful of zip codes that span state boundaries!
 
-So what we have to do is look for points that are in *both* a ZIP code and within the border of the state. The only remaining catch is that a couple big bodies of water, such as the Quabbin Reservior do no have a ZIP code. The simple fix for this is to just assume presence in a ZIP code west of -71.5º longitude.
+So what we have to do is look for points that are in *both* a ZIP code and within the border of the state. The only remaining catch is that a couple big bodies of water, such as the Quabbin Reservior do not have a ZIP code. The simple fix for this is to just assume presence in a ZIP code west of -71.5º longitude (west of Boston, more or less).
 
 ## Computational approach
 
