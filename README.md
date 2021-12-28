@@ -46,7 +46,9 @@ All our data is in degrees of latitude and longitude. However, the size of a deg
 
 ## Results
 
-I tested the sampling code using Excel as mentioned above, and the resulting file is included with the sources.
+I tested the sampling code using Excel as mentioned above, and the resulting file is included with the sources. The orange dots are my samples that pass all the tests, and the gray dots are the boundaries of the state.
+
+<img width="1061" alt="excel plot of 2KM sample interval" src="https://user-images.githubusercontent.com/42067635/147588456-850e08a8-7452-4339-a969-70872710a267.png">
 
 Using a 100 meter sampling interval, the program eventually yielded these results:
 
