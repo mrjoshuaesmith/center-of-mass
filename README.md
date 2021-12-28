@@ -20,7 +20,7 @@ Although it's not particularly clear in that sentence, that "or" doesn't meant t
 
 That USGS pub says there are as many centers as there are definitions, which means they acknowledge the balace point isn't the only one. Another obvious one would be the center of a bounding rectangle.
 
-Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is also the centroid of the shape, since we assume constant elevation), it is simply an *average*. When we look at data using an average, outliers (looking at you Provicetown) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
+Thinking about the center of gravity (which in this construct is also the center of mass, since we assume constant gravity; and it is also the centroid of the shape, since we assume constant elevation), it is simply an *average*. When we look at data using an average, outliers (looking at you Nantucket) tend to lead to skewed results. In other data sets (wealth distribution, for example), statisticians like to instead use the *median*. This effecively throws away the outliers and gives you the logical middle.
 
 In this project, I decided to go ahead and find all three: center of bounding rectangle, balance point (aka, center of mass/gravity), and median.
 
@@ -55,6 +55,7 @@ def meterToLon(lat):
 
 meters = 100
 lat = minLat
+latStep = meters*meterToLat()
 while lat <= maxLat:
     lon = minLon
     lonStep = meters*meterToLon(lat)
@@ -63,7 +64,7 @@ while lat <= maxLat:
         # do things with lon, lat
         #
         lon += lonStep
-    lat += meters*meterToLat()
+    lat += latStep
 
 ```
 
@@ -78,7 +79,25 @@ You'll notice a little hole at Lake Massapoag, and at a tigher sampling interval
 Using a 100 meter sampling interval and a few hours of CPU time, the program eventually yielded these results:
 
 ```
+Center of Bounding Box: 42.057584, -71.715418
+Balance Point: 42.242565, -71.778800
+Median: 42.272181, -71.698710
 ```
+
+Which you can see [on this map](https://www.google.com/maps/d/viewer?mid=1Wj8O65EuIijHrmQQfpE9vdrXi2yIoQq6&usp=sharing).
+
+The center of the bounding box is in Douglas, clearly very far south of what anyone might think is the middle of the state.
+
+The balance point is in an Audobon park in southern Worcester, near that wind turbine you can see from Route 146.
+
+The median is in a Shrewsbury neighborhood, near the intersection of Routes 9 and 20.
+
+## Conclusions
+
+Rutland is nowhere near the center of Massachusetts by any reasonable definiton. It's kind of near the middle of the box if you chop off everything south of Foxboro, including the entirety of the Cape and Islands. Sorry, Rutland.
+
+Feel free to download this project and fiddle with it. You'll find that the sampling interval ``meters = 100`` has a huge impact on runtime, but not much impact on the results. It should be relatively simple to adapt this project to find the centers of other states, by downloading similar data sets from the site linked above.
+
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

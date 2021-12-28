@@ -74,8 +74,9 @@ def test(lon, lat):
 
 samples = []
 
-meters = 100
+meters = 500
 lat = minLat
+latStep = meters*meterToLat()
 while lat <= maxLat:
     lon = minLon
     lonStep = meters*meterToLon(lat)
@@ -84,7 +85,8 @@ while lat <= maxLat:
             #print("%f\t%f" % (lon, lat))
             samples.append([lon,lat])
         lon += lonStep
-    lat += meters*meterToLat()
+    lat += latStep
+    print("%f%%" % (100*(lat-minLat)/(maxLat-minLat)))
 
 # Find the actual min/max lat/lon, excluding territorial waters
 minLat = minLon = 360
