@@ -34,7 +34,7 @@ Looking at other data on that same site, I found [maps of all the zip codes in M
 
 The next thing I learned, though, is that there are a handful of zip codes that span state boundaries!
 
-So what we have to do is look for points that are in *both* a ZIP code and within the border of the state. The only remaining catch is that a couple big bodies of water, such as the Quabbin Reservior do not have a ZIP code. The simple fix for this is to just assume presence in a ZIP code west of -71.5º longitude (west of Boston, more or less).
+So what we have to do is look for points that are in *both* a ZIP code and within the border of the state. The only remaining catch is that a couple big bodies of water, such as the Quabbin Reservior, do not have a ZIP code. The simple fix for this is to just assume presence in a ZIP code west of -71.5º longitude (west of Boston, more or less).
 
 ## Computational approach
 
@@ -76,7 +76,7 @@ I tested the sampling code using Excel as mentioned above, and the resulting fil
 
 You'll notice a little hole at Lake Massapoag, and at a tigher sampling interval, there are probably a couple other lakes that get skipped east of -71.5º, but all in all, it seems unlikely those would impact our results much.
 
-Using a 100 meter sampling interval and a few hours of CPU time, the program eventually yielded these results:
+Using a 100 meter sampling interval and about 8 hours of CPU time, the program eventually yielded these results:
 
 ```
 Center of Bounding Box: 42.057584, -71.715418
