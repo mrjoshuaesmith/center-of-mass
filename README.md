@@ -16,7 +16,7 @@ This raises the obvious question: Where is the Center of Massachusetts? Is it *a
 [According to the USGS](https://pubs.er.usgs.gov/publication/70039437):
 > The geographic center of an area may be defined as the center of gravity of the surface, or that point on which the surface of the area would balance if it were a plane of uniform thickness.
 
-Although it's not particularly clear in that sentence, that "or" doesn't meant there are two definitions. The center of gravity *is* the point a cardboard cutout of the state would balance. If you look at the referenced document, it says that's somewhere in the northern part of the City of Worcester. (They don't give a specific location.) Probably worth pointing out here: Rutland is not in Worcester.
+Although it's not particularly clear in that sentence, that "or" doesn't mean there are two definitions. The center of gravity *is* the point a cardboard cutout of the state would balance. If you look at the referenced document, it says that's somewhere in the northern part of the City of Worcester. (They don't give a specific location.) Probably worth pointing out here: Rutland is not in Worcester.
 
 That USGS pub says there are as many centers as there are definitions, which means they acknowledge the balace point isn't the only one. Another obvious one would be the center of a bounding rectangle.
 
